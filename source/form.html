@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="main-nav">
+      <div class="main-nav__wrapper">
+        <a href="index.html" class="page-header__logo">
+          <img class="page-header__logo-image" src="" alt="">
+        </a>
+        <button class="main-nav__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
+      <ul class="main-nav__list site-nav">
+        <li class="site-nav__item">
+          <a href="index.html" class="site-nav__link">Главная</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="photo.html" class="site-nav__link">Фото и видео</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="form.html" class="site-nav__link">Форма отзыва</a>
+        </li>
+        <li class="site-nav__item">
+          <a href="#" class="site-nav__link">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="page-title">Оставьте свой отзыв</h1>
+    <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    <form action="">
+      <fieldset>
+        <legend>Представьтесь:</legend>
+        <p class="custom-text-field">
+          <label for="user-name">Имя*:</label>
+          <input type="text" name="user-name" id="user-name" placeholder="Петр" required>
+        </p>
+        <p class="custom-text-field">
+          <label for="user-surname">Фамилия*:</label>
+          <input type="text" name="user-surname" id="user-surname" placeholder="Иванов" required>
+        </p>
+        <p class="custom-text-field">
+          <label for="user-middle-name">Отчество:</label>
+          <input type="text" name="user-middle-name" id="user-middle-name" placeholder="Александрович">
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Контактная информация:</legend>
+        <p class="custom-text-field">
+          <label for="user-phone">Контактный телефон*:</label>
+          <input type="tel" name="user-phone" id="user-phone" placeholder="Введите телефон" required>
+        </p>
+        <p class="custom-text-field">
+          <label for="user-email">Электронная почта*:</label>
+          <input type="email" name="user-email" id="user-email" placeholder="Введите e-mail" required>
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Ваше общее впечатление:</legend>
+        <ul>
+          <li class="custom-radio">
+            <input type="radio" name="user-impress" id="positive-impression" checked>
+            <label for="positive-impression">Скорее положительно</label>
+          </li>
+          <li class="custom-radio">
+            <input type="radio" name="user-impress" id="negative-impression">
+            <label for="negative-impression">Скорее отрицательное</label>
+          </li>
+          <li class="custom-radio">
+            <input type="radio" name="user-impress" id="neutral-impression">
+            <label for="neutral-impression">Затрудняюсь ответить</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Посещенные достопримечательности:</legend>
+        <ul>
+          <li class="custom-checkbox">
+            <input type="checkbox" name="attractions" id="">
+            <label for="">Мост Дьявола</label>
+          </li>
+          <li class="custom-checkbox">
+            <input type="checkbox" name="attractions" id="">
+            <label for="">Гора-Колокол</label>
+          </li>
+          <li class="custom-checkbox">
+            <input type="checkbox" name="attractions" id="">
+            <label for="">Слайд-парк</label>
+          </li>
+          <li class="custom-checkbox">
+            <input type="checkbox" name="attractions" id="">
+            <label for="">Красные скалы</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Опишите свои эмоции:</legend>
+        <textarea class="custom-textarea" name="" id="" cols="30" rows="10"
+          placeholder="Опишите подробно все свои восторги"></textarea>
+      </fieldset>
+      <button class="button" type="submit">Отправить отзыв</button>
+      <small>* - обязательные поля</small>
+    </form>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__hashtag">
+      <b>#VISITSEDONA</b>
+    </div>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--twitter">
+            <span class="visually-hidden">Мы в Твиттере</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--facebook">
+            <span class="visually-hidden">Наша страница в фейсбуке</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--youtube">
+            <span class="visually-hidden">Наш канал на Ютубе</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__label">Разработано</b>
+      <p class="copyright__logo">
+        <img class="copyright__logo-image" src="" alt="">
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
