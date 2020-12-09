@@ -1,0 +1,42 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__label {
+  margin: 0;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+
+.copyright__logo {
+  display: block;
+  width: 27px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    .copyright__logo-image {
+      fill: $color-light-blue;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    .copyright__logo-image {
+      fill: $color-black;
+    }
+  }
+}
+
+.copyright__logo-image {
+  display: block;
+  width: 27px;
+  height: 34px;
+}
