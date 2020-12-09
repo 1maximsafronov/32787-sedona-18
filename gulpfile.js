@@ -17,7 +17,8 @@ const copy = () => {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/css/**"
   ], {
     base: "source"
   })
@@ -80,7 +81,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html").on("change", gulp.series("html", sync.reload));
 }
 
 const build = gulp.series(clean, copy, styles, html);
