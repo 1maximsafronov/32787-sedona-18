@@ -1,4 +1,4 @@
-# Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Седона»
 
 * Студент: [Максим Сафронов](https://up.htmlacademy.ru/adaptive/18/user/32787).
 * Наставник: `Неизвестно`.

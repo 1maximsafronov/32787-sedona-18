@@ -1,0 +1,29 @@
+.page {
+  box-sizing: border-box;
+  min-width: 320px;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page__body {
+  min-height: 100%;
+
+  color: #000000;
+  background-color: $basic-light-gray;
+
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

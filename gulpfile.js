@@ -1,72 +1,28 @@
-const del = require("del");
-const gulp = require("gulp");
-const csso = require("gulp-csso");
-const sass = require("gulp-sass");
-const rename = require("gulp-rename");
-const plumber = require("gulp-plumber");
-const htmlmin = require("gulp-htmlmin");
-const postcss = require("gulp-postcss");
-const posthtml = require("gulp-posthtml");
-const include = require("posthtml-include");
-const sourcemap = require("gulp-sourcemaps");
-const autoprefixer = require("autoprefixer");
-const sync = require("browser-sync").create();
+const gulp = require(`gulp`);
+const sync = require(`browser-sync`).create();
+const ghpages = require(`gh-pages`);
 
-const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("build"));
+const clean = require(`./gulp/clean`);
+const copy = require(`./gulp/copy`);
+const copyImages = require(`./gulp/copy-images`);
+const optimizeImages = require(`./gulp/optimize-images`);
+const styles = require(`./gulp/styles`);
+const html = require(`./gulp/html`);
+const scripts = require(`./gulp/scripts`);
+const svgSprite = require(`./gulp/svg-sprite`);
+const createWebp = require(`./gulp/create-webp`);
+
+const reload = (done) => {
+  sync.reload();
+  done();
 }
-
-exports.copy = copy;
-
-const clean = () => {
-  return del("build");
-}
-
-exports.clean = clean;
-
-// Styles
-
-const styles = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
-
-exports.styles = styles;
-
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(posthtml([include()]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("build"));
-}
-
-exports.html = html;
-
-// Server
 
 const server = (done) => {
   sync.init({
     server: {
       baseDir: 'build'
     },
+    open: true,
     cors: true,
     notify: false,
     ui: false,
@@ -74,15 +30,50 @@ const server = (done) => {
   done();
 }
 
-exports.server = server;
-
-// Watcher
-
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles, reload));
+  gulp.watch("source/js/*.js", gulp.series(scripts, reload));
 }
 
-const build = gulp.series(clean, copy, styles, html);
-exports.build = build;
-exports.default = gulp.series(build, server, watcher);
+const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svgSprite,
+    createWebp
+  )
+);
+
+const start = gulp.series(
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svgSprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  )
+);
+
+
+const loadOnGithub = () => {
+  return ghpages.publish(`build`, function () { });
+};
+
+const publish = gulp.series(build, loadOnGithub);
+
+// Экспорты тасков
+module.exports.start = start;
+module.exports.build = build;
+module.exports.publish = publish;
