@@ -1,0 +1,258 @@
+/* -- editorconfig-checker-disable-file */
+
+@charset "UTF-8";
+
+*,
+::after,
+::before {
+  border-radius: 2px;
+}
+
+::after,
+::before {
+  background-color: #f6f7f9;
+  box-shadow: 0 0 2px 1px #a5b1c2;
+}
+
+body,
+html {
+  box-shadow: 0 0 2px 1px #a5b1c2, 0 0 0 1px #a5b1c2;
+}
+
+footer,
+header,
+main {
+  background-color: #f2fcfb;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(230, 249, 247, 0.5),
+      rgba(230, 249, 247, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(230, 249, 247, 0.5),
+      rgba(230, 249, 247, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+  box-shadow: 0 0 2px 1px #10b9b1, 0 0 0 1px #10b9b1;
+}
+
+article,
+aside,
+nav,
+section {
+  background-color: #f8f1fd;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(241, 228, 251, 0.5),
+      rgba(241, 228, 251, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(241, 228, 251, 0.5),
+      rgba(241, 228, 251, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+  box-shadow: 0 0 2px 1px #8854d0, 0 0 0 1px #8854d0;
+}
+
+div,
+form,
+table {
+  box-shadow: 0 0 2px 1px #4b6584, 0 0 0 1px #4b6584;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background-color: #fff7f0;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 239, 225, 0.5),
+      rgba(255, 239, 225, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 239, 225, 0.5),
+      rgba(255, 239, 225, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+  box-shadow: 0 0 2px 1px #fa8231, 0 0 0 1px #fa8231;
+}
+
+blockquote,
+dl,
+fieldset,
+figure,
+ol,
+p,
+ul {
+  background-color: #f1f5fe;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(227, 235, 253, 0.5),
+      rgba(227, 235, 253, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(227, 235, 253, 0.5),
+      rgba(227, 235, 253, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+  box-shadow: 0 0 2px 1px #3867d6, 0 0 0 1px #3867d6;
+}
+
+address,
+dd,
+dt,
+li,
+pre {
+  background-color: #fffcf0;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 249, 225, 0.5),
+      rgba(255, 249, 225, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 249, 225, 0.5),
+      rgba(255, 249, 225, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+  box-shadow: 0 0 2px 1px #f7b731, 0 0 0 1px #f7b731;
+}
+
+a,
+button,
+input,
+keygen,
+select,
+textarea {
+  background-color: #f2fdf7;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(229, 251, 239, 0.5),
+      rgba(229, 251, 239, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(229, 251, 239, 0.5),
+      rgba(229, 251, 239, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+  box-shadow: 0 0 2px 1px #20bf6b, 0 0 0 1px #20bf6b;
+}
+
+abbr,
+area,
+b,
+bdi,
+bdo,
+br,
+cite,
+code,
+data,
+datalist,
+del,
+dfn,
+em,
+i,
+label,
+legend,
+mark,
+q,
+s,
+small,
+span,
+strong,
+sub,
+sup,
+template,
+time {
+  background-color: #fff0f1;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 225, 227, 0.5),
+      rgba(255, 225, 227, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 225, 227, 0.5),
+      rgba(255, 225, 227, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+  box-shadow: 0 0 2px 1px #eb3b5a, 0 0 0 1px #eb3b5a;
+}
+
+audio,
+canvas,
+embed,
+iframe,
+img,
+math,
+object,
+svg,
+video {
+  background-color: #f1f8fe;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(227, 241, 253, 0.5),
+      rgba(227, 241, 253, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(227, 241, 253, 0.5),
+      rgba(227, 241, 253, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+  box-shadow: 0 0 2px 1px #2d98da, 0 0 0 1px #2d98da;
+}
+
+body,
+div,
+form,
+html,
+table {
+  background-color: #f6f7f9;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(237, 239, 243, 0.5),
+      rgba(237, 239, 243, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(237, 239, 243, 0.5),
+      rgba(237, 239, 243, 0.5) 5px,
+      transparent 5px,
+      transparent 50px
+    );
+}
