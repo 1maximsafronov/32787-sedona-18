@@ -1,0 +1,59 @@
+.feedback {
+  //
+}
+
+.feedback__title {
+  text-align: center;
+
+  color: $basic-black;
+
+  font-size: 18px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.feedback__desc {
+  text-align: center;
+}
+
+.feedback__subtitle {
+  display: block;
+
+  color: $basic-black;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
+}
+
+.feedback input,
+.feedback textarea {
+  text-transform: none;
+
+  color: $basic-black;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.feedback__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  text-transform: none;
+
+  color: $basic-black;
+
+  font-size: 18px;
+  font-weight: 700;
+}
