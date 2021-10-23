@@ -11,12 +11,18 @@
 }
 
 .page__body {
+  display: grid;
+
   min-height: 100%;
 
-  color: #000000;
-  background-color: $basic-light-gray;
+  text-transform: uppercase;
+
+  color: $basic-dark-gray;
+  background-color: $bg-lighter-gray;
 
   font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
 }
 
 img {
