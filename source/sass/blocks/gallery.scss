@@ -1,0 +1,37 @@
+.gallery {
+  //
+}
+
+.gallery__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.gallery__item {
+  background-color: $bg-lighter-gray;
+}
+
+.gallery__item-title {
+  color: $basic-black;
+
+  font-size: inherit;
+}
+
+.gallery__item-picture {
+  //
+}
+
+.gallery__item-author {
+  //
+}
+
+.gallery__item-likes {
+  color: $basic-black;
+
+  font-weight: 700;
+}

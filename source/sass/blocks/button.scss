@@ -1,0 +1,32 @@
+.button {
+  padding: 0;
+
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $basic-white;
+  border: none;
+  background: none;
+  background-color: $special-light-blue;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+
+  &:hover,
+  &:focus {
+    background-color: $special-light-blue-hover;
+  }
+
+  &:active {
+    background-color: $special-light-blue-active;
+  }
+
+  &--disabled,
+  &:disabled {
+    cursor: not-allowed;
+
+    background-color: #e5e5e5;
+  }
+}

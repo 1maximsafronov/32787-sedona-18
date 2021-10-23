@@ -1,0 +1,31 @@
+.find-hotel {
+  text-align: center;
+  //
+}
+
+.find-hotel__title {
+  color: $basic-black;
+
+  font-size: 21px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.find-hotel__desc {
+  //
+}
+
+.find-hotel__link {
+  //
+}
+
+.find-hotel__map {
+  height: 350px;
+
+  background-image: url("../img/bg-map-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
