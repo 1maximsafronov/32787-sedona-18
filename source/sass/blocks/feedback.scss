@@ -33,6 +33,82 @@
   }
 }
 
+.feedback__form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    padding-right: 60px;
+    padding-left: 60px;
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+}
+
+.feedback__item {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.feedback__user-info {
+  //
+}
+
+.feedback__contacts {
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.feedback__impression {
+  @media (min-width: $tablet-width) {
+    order: -1;
+  }
+}
+
+.feedback__landmark {
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.feedback__message {
+  @media (min-width: $tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+
+.feedback__legend {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    align-self: center;
+
+    max-width: 196px;
+    margin: 0;
+
+    text-align: right;
+
+    justify-self: end;
+  }
+}
+
 .feedback input,
 .feedback textarea {
   text-transform: none;

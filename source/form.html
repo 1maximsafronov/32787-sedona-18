@@ -11,16 +11,19 @@
 <body class="page__body">
   <div class="container">
     <header class="page-header">
-      <nav class="main-nav">
-        <a href="index.html" class="logotype">
-          <picture>
-            <source srcset="./img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
-            <img src="./img/logo-sedona-mobile.svg" alt="Логотип Седона">
-          </picture>
-        </a>
-        <ul class="site-nav">
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__top-wrapper">
+          <a class="page-header__logo logotype" href="index.html">
+            <picture>
+              <source srcset="./img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+              <source srcset="./img/logo-sedona-tablet.svg" media="(min-width: 768px)">
+              <img class="logotype__image" src="./img/logo-sedona-mobile.svg" alt="Логотип Седона">
+            </picture>
+          </a>
+        </div>
+        <ul class="main-nav__list site-nav">
           <li class="site-nav__item">
-            <a href="blank.html" class="site-nav__link">Главная</a>
+            <a href="index.html" class="site-nav__link">Главная</a>
           </li>
           <li class="site-nav__item">
             <a href="photo.html" class="site-nav__link">Фото и видео</a>
@@ -32,6 +35,9 @@
             <a href="blank.html" class="site-nav__link">HTML Academy</a>
           </li>
         </ul><!-- /site-nav -->
+        <button class="main-nav__toggle">
+          <span class="visually-hidden">Открыть/Закрыть меню</span>
+        </button>
       </nav><!-- /main-nav -->
       <div class="page-header__intro">
         <img class="page-header__intro-img" src="./img/text-sedona.svg" alt="Welcome to the gargeous Sedona">
@@ -46,7 +52,7 @@
           достопримечательностях
         </p>
         <form class="feedback__form" action="#" method="post">
-          <fieldset class="feedback__user-info">
+          <fieldset class="feedback__item feedback__user-info">
             <legend class="feedback__subtitle">Представьтесь:</legend>
             <p>
               <label for="">Имя*:</label>
@@ -62,7 +68,7 @@
             </p>
           </fieldset>
 
-          <fieldset class="feedback__contacts">
+          <fieldset class="feedback__item feedback__contacts">
             <legend class="feedback__subtitle">Контактная информация:</legend>
             <p>
               <label for="">Контактный телефон*:</label>
@@ -74,7 +80,7 @@
             </p>
           </fieldset>
 
-          <fieldset class="feedback__impression">
+          <fieldset class="feedback__item feedback__impression">
             <legend class="feedback__subtitle">Ваше общее впечатление:</legend>
             <ul class="feedback__list">
               <li><input type="radio" name="" id="" checked><label for="">Скорее положительное</label></li>
@@ -83,7 +89,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="feedback__landmark">
+          <fieldset class="feedback__item feedback__landmark">
             <legend class="feedback__subtitle">Посещенные достопримечательности:</legend>
             <ul class="feedback__list">
               <li><input type="checkbox" name="" id=""><label for="">Мост Дьявола</label></li>
@@ -93,28 +99,50 @@
             </ul>
           </fieldset>
 
-          <fieldset class="feedback__message">
+          <fieldset class="feedback__item feedback__message">
             <legend class="feedback__subtitle">Опишите свои эмоции:</legend>
             <textarea name="" id="" cols="30" rows="10"></textarea>
           </fieldset>
           <button class="feedback__submit button" type="submit">Отправить отзыв</button>
+          <p class="feedback__legend">* — обязательные поля</p>
         </form>
       </section>
     </main>
 
     <footer class="page-footer">
-      <a href="#" class="hashtag">#visitsedona</a>
-      <div class="social">
+      <a href="#" class="page-foote__hashtag hashtag">#visitsedona</a>
+      <div class="page-footer__social social">
         <ul class="social__list">
-          <li class="social__item"><a href="#" class="social__link"><span class="visually-hidden">Страница в
-                Твиттере</span></a></li>
-          <li class="social__item"><a href="#" class="social__link"><span class="visually-hidden">Страница на
-                Фейсбук</span></a></li>
-          <li class="social__item"><a href="#" class="social__link"><span class="visually-hidden">Канал на
-                Ютуб</span></a></li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--tw">
+              <svg class="social__icon" width="17.5px" height="14.663px" fill="#fff">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg>
+              <span class="visually-hidden">Страница в
+                Твиттере</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--fb">
+              <svg class="social__icon" width="8.672px" height="18.944px" fill="#fff">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+              <span class="visually-hidden">Страница на
+                Фейсбук</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--yt">
+              <svg class="social__icon" width="19.979px" height="14.015px" fill="#fff">
+                <use xlink:href="img/sprite.svg#icon-youtube"></use>
+              </svg>
+              <span class="visually-hidden">Канал на
+                Ютуб</span>
+            </a>
+          </li>
         </ul>
       </div><!-- /social -->
-      <div class="copyright">
+      <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a href="#" class="copyright__link">
           <span class="visually-hidden">Html Academy</span>
@@ -130,6 +158,15 @@
   </div><!-- /container -->
 
   <script src="js/script.min.js"></script>
+  <script>
+    const mainNav = document.querySelector(`.main-nav`);
+    const mainNavToggle = mainNav.querySelector(`.main-nav__toggle`);
+
+    mainNavToggle.addEventListener(`click`, (evt) => {
+      evt.preventDefault();
+      mainNav.classList.toggle(`main-nav--closed`);
+    });
+  </script>
 </body>
 
 </html>

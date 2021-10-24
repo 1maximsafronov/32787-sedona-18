@@ -1,8 +1,21 @@
 .features {
-  //
+  padding-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 43px;
+  }
 }
 
 .features__title {
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 33px;
+  margin-left: 20px;
+
   text-align: center;
 
   color: $basic-black;
@@ -11,16 +24,38 @@
   line-height: 26px;
 
   @media (min-width: $tablet-width) {
+    width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+
     font-size: 21px;
   }
 }
 
 .features__desc {
+  margin: 0;
+  margin-right: 20px;
+  margin-left: 20px;
+
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .features__list {
-  //
+  margin: 0;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .features__item {
@@ -36,13 +71,41 @@
       color: inherit;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    &--with-picture {
+      display: grid;
+
+      grid-template-columns: 1fr 2fr;
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
 }
 
 .features__item-wrapper {
-  //
+  padding-top: 25px;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 256px;
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-bottom: 40px;
+    padding-left: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 42px;
+    padding-left: 42px;
+  }
 }
 
 .features__item-title {
+  margin: 0;
+
   color: $basic-black;
 
   font-size: 18px;
@@ -54,15 +117,25 @@
 }
 
 .features__item-number {
-  //
+  margin: 0;
 }
 
 .features__item-desc {
-  //
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .features__item-picture {
-  //
+  height: 260px;
+  margin: 0;
+
+  @include flexImage;
+
+  @media (min-width: $tablet-width) {
+    height: auto;
+  }
 }
 
 .features__details-list {
@@ -74,25 +147,51 @@
   background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
+    display: grid;
+
     text-align: center;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 }
 
 .features__details-item {
   //
+
+  @media (min-width: $tablet-width) {
+    padding-top: 158px;
+    padding-right: 32px;
+    padding-bottom: 60px;
+    padding-left: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 42px;
+    padding-bottom: 80px;
+    padding-left: 42px;
+  }
 }
 
 .features__details-title {
+  margin: 0;
+
   color: $basic-black;
 
   font-size: 18px;
   line-height: 26px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+
     font-size: 21px;
   }
 }
 
 .features__details-desc {
-  //
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 21px;
 }

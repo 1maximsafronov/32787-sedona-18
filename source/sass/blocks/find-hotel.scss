@@ -1,29 +1,74 @@
 .find-hotel {
+  padding-top: 33px;
+
   text-align: center;
-  //
+
+  @media (min-width: $tablet-width) {
+    padding-top: 58px;
+  }
 }
 
 .find-hotel__title {
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 33px;
+  margin-left: 20px;
+
   color: $basic-black;
 
   font-size: 21px;
   line-height: 26px;
 
   @media (min-width: $tablet-width) {
+    width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+
     font-size: 30px;
   }
 }
 
 .find-hotel__desc {
-  //
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 27px;
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 435px;
+    margin-right: auto;
+    margin-bottom: 36px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .find-hotel__link {
-  //
+  display: block;
+
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+    margin-right: auto;
+    margin-bottom: 58px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
+  }
 }
 
 .find-hotel__map {
   height: 350px;
+  margin: 0;
 
   background-image: url("../img/bg-map-desktop@1x.jpg");
   background-repeat: no-repeat;
