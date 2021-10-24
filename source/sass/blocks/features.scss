@@ -84,6 +84,11 @@
 }
 
 .features__item-wrapper {
+  padding-top: 25px;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+
   @media (min-width: $tablet-width) {
     min-height: 256px;
     padding-top: 40px;
