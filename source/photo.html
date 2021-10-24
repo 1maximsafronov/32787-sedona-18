@@ -11,16 +11,19 @@
 <body class="page__body">
   <div class="container">
     <header class="page-header">
-      <nav class="main-nav">
-        <a href="index.html" class="logotype">
-          <picture>
-            <source srcset="./img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
-            <img src="./img/logo-sedona-mobile.svg" alt="Логотип Седона">
-          </picture>
-        </a>
-        <ul class="site-nav">
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__top-wrapper">
+          <a class="page-header__logo logotype" href="index.html">
+            <picture>
+              <source srcset="./img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+              <source srcset="./img/logo-sedona-tablet.svg" media="(min-width: 768px)">
+              <img class="logotype__image" src="./img/logo-sedona-mobile.svg" alt="Логотип Седона">
+            </picture>
+          </a>
+        </div>
+        <ul class="main-nav__list site-nav">
           <li class="site-nav__item">
-            <a href="blank.html" class="site-nav__link">Главная</a>
+            <a href="index.html" class="site-nav__link">Главная</a>
           </li>
           <li class="site-nav__item">
             <a class="site-nav__link site-nav__link--active">Фото и видео</a>
@@ -32,6 +35,9 @@
             <a href="blank.html" class="site-nav__link">HTML Academy</a>
           </li>
         </ul><!-- /site-nav -->
+        <button class="main-nav__toggle">
+          <span class="visually-hidden">Открыть/Закрыть меню</span>
+        </button>
       </nav><!-- /main-nav -->
       <div class="page-header__intro">
         <img class="page-header__intro-img" src="./img/text-sedona.svg" alt="Welcome to the gargeous Sedona">
@@ -119,6 +125,15 @@
   </div><!-- /container -->
 
   <script src="js/script.min.js"></script>
+  <script>
+    const mainNav = document.querySelector(`.main-nav`);
+    const mainNavToggle = mainNav.querySelector(`.main-nav__toggle`);
+
+    mainNavToggle.addEventListener(`click`, (evt) => {
+      evt.preventDefault();
+      mainNav.classList.toggle(`main-nav--closed`);
+    });
+  </script>
 </body>
 
 </html>

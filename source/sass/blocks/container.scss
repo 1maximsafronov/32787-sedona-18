@@ -1,5 +1,8 @@
 .container {
   display: grid;
+  // width: 100%;
+  // min-width: 320px;
+  // max-width: 1200px;
 
   width: $mobile-width;
   margin: 0 auto;

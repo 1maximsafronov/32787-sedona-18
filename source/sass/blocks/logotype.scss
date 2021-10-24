@@ -1,0 +1,16 @@
+.logotype,
+.logotype__image {
+  display: block;
+
+  width: 102px;
+  height: 84px;
+
+  @media (min-width: $desktop-width) {
+    width: 187px;
+    height: 96px;
+  }
+}
+
+.logotype__image {
+  object-fit: contain;
+}
