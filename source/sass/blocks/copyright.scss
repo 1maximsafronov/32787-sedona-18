@@ -1,0 +1,35 @@
+.copyright {
+  display: flex;
+}
+
+.copyright__text {
+  margin: 0;
+  margin-right: 12px;
+}
+
+.copyright__link {
+  display: block;
+
+  width: 27px;
+  height: 34px;
+
+  &:hover,
+  &:focus {
+    .copyright__logo {
+      fill: $special-light-blue;
+    }
+  }
+
+  &:active {
+    .copyright__logo {
+      fill: $basic-black-opacity-30;
+    }
+  }
+}
+
+.copyright__logo {
+  display: block;
+
+  width: 27px;
+  height: 34px;
+}
