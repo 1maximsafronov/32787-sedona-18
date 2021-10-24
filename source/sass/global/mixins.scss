@@ -1,0 +1,16 @@
+@mixin flexImage {
+  position: relative;
+
+  img {
+    position: absolute;
+
+    display: block;
+
+    width: 100%;
+    max-width: none;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}

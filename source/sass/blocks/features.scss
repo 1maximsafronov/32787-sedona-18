@@ -128,23 +128,10 @@
 }
 
 .features__item-picture {
-  position: relative;
-
   height: 260px;
   margin: 0;
 
-  img {
-    position: absolute;
-
-    display: block;
-
-    width: 100%;
-    max-width: none;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-  }
+  @include flexImage;
 
   @media (min-width: $tablet-width) {
     height: auto;
