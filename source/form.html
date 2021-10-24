@@ -52,7 +52,7 @@
           достопримечательностях
         </p>
         <form class="feedback__form" action="#" method="post">
-          <fieldset class="feedback__user-info">
+          <fieldset class="feedback__item feedback__user-info">
             <legend class="feedback__subtitle">Представьтесь:</legend>
             <p>
               <label for="">Имя*:</label>
@@ -68,7 +68,7 @@
             </p>
           </fieldset>
 
-          <fieldset class="feedback__contacts">
+          <fieldset class="feedback__item feedback__contacts">
             <legend class="feedback__subtitle">Контактная информация:</legend>
             <p>
               <label for="">Контактный телефон*:</label>
@@ -80,7 +80,7 @@
             </p>
           </fieldset>
 
-          <fieldset class="feedback__impression">
+          <fieldset class="feedback__item feedback__impression">
             <legend class="feedback__subtitle">Ваше общее впечатление:</legend>
             <ul class="feedback__list">
               <li><input type="radio" name="" id="" checked><label for="">Скорее положительное</label></li>
@@ -89,7 +89,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="feedback__landmark">
+          <fieldset class="feedback__item feedback__landmark">
             <legend class="feedback__subtitle">Посещенные достопримечательности:</legend>
             <ul class="feedback__list">
               <li><input type="checkbox" name="" id=""><label for="">Мост Дьявола</label></li>
@@ -99,11 +99,12 @@
             </ul>
           </fieldset>
 
-          <fieldset class="feedback__message">
+          <fieldset class="feedback__item feedback__message">
             <legend class="feedback__subtitle">Опишите свои эмоции:</legend>
             <textarea name="" id="" cols="30" rows="10"></textarea>
           </fieldset>
           <button class="feedback__submit button" type="submit">Отправить отзыв</button>
+          <p class="feedback__legend">* — обязательные поля</p>
         </form>
       </section>
     </main>
