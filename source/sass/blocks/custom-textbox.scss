@@ -1,0 +1,60 @@
+.custom-textbox {
+  box-sizing: inherit;
+  width: 100%;
+  margin: 0;
+  padding-top: 18px;
+  padding-right: 22px;
+  padding-bottom: 14px;
+  padding-left: 22px;
+
+  color: $basic-black;
+  border: none;
+  background-color: #f2f2f2;
+  // font: inherit;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus,
+  &:active {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+  }
+}
+
+.custom-textbox[type="tel"],
+.custom-textbox--tel {
+  padding-right: 80px;
+
+  background-image: url("../img/icon-phone.svg"),
+    linear-gradient(
+      270deg,
+      #e6e6e6 0,
+      #e6e6e6 58px,
+      transparent 58px,
+      transparent 100%
+    );
+  background-repeat: no-repeat;
+  background-position: top 50% right 20px, right;
+}
+
+.custom-textbox[type="email"],
+.custom-textbox--email {
+  padding-right: 80px;
+
+  background-image: url("../img/icon-mail.svg"),
+    linear-gradient(
+      270deg,
+      #e6e6e6 0,
+      #e6e6e6 58px,
+      transparent 58px,
+      transparent 100%
+    );
+  background-repeat: no-repeat;
+  background-position: top 50% right 20px, right;
+}
