@@ -22,7 +22,7 @@ const server = (done) => {
     server: {
       baseDir: 'build'
     },
-    open: true,
+    open: false,
     cors: true,
     notify: false,
     ui: false,
