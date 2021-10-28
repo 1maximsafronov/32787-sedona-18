@@ -51,7 +51,7 @@
           Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами
           достопримечательностях
         </p>
-        <form class="feedback__form" action="#" method="post">
+        <form class="feedback__form" name="feedback-form" id="feedback-form" action="#" method="post">
           <fieldset class="feedback__item feedback__user-info">
             <legend class="feedback__subtitle">Представьтесь:</legend>
             <p>
@@ -83,19 +83,43 @@
           <fieldset class="feedback__item feedback__impression">
             <legend class="feedback__subtitle">Ваше общее впечатление:</legend>
             <ul class="feedback__list">
-              <li><input type="radio" name="" id="" checked><label for="">Скорее положительное</label></li>
-              <li><input type="radio" name="" id=""><label for="">Скорее отрицательное</label></li>
-              <li><input type="radio" name="" id=""><label for="">Затрудняюсь ответить</label></li>
+              <li>
+                <input class="visually-hidden" type="radio" name="feedback-form-impression"
+                  id="feedback-form-impression-positive" value="positive" checked>
+                <label class="custom-radiobtn" for="feedback-form-impression-positive">Скорее положительное</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="radio" name="feedback-form-impression"
+                  id="feedback-form-impression-negative" value="negative">
+                <label class="custom-radiobtn" for="feedback-form-impression-negative">Скорее отрицательное</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="radio" name="feedback-form-impression"
+                  id="feedback-form-impression-cant-answer" value="cant-answer">
+                <label class="custom-radiobtn" for="feedback-form-impression-cant-answer">Затрудняюсь ответить</label>
+              </li>
             </ul>
           </fieldset>
 
           <fieldset class="feedback__item feedback__landmark">
             <legend class="feedback__subtitle">Посещенные достопримечательности:</legend>
             <ul class="feedback__list">
-              <li><input type="checkbox" name="" id=""><label for="">Мост Дьявола</label></li>
-              <li><input type="checkbox" name="" id=""><label for="">Гора-Колокол</label></li>
-              <li><input type="checkbox" name="" id=""><label for="">Слайд-парк</label></li>
-              <li><input type="checkbox" name="" id=""><label for="">Красные скалы</label></li>
+              <li>
+                <input type="checkbox" name="" id="" checked>
+                <label class="custom-checkbox" for="">Мост Дьявола</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="" checked>
+                <label for="">Гора-Колокол</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="" checked>
+                <label for="">Слайд-парк</label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">Красные скалы</label>
+              </li>
             </ul>
           </fieldset>
 
