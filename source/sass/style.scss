@@ -6,7 +6,7 @@
 @import "./global/global.scss";
 
 // outline utils
-@import "./outline.scss";
+// @import "./outline.scss";
 
 // blocks
 @import "./blocks/visually-hidden.scss";
@@ -27,6 +27,7 @@
 
 // Photo page
 @import "./blocks/gallery.scss";
+@import "./blocks/photo-card.scss";
 @import "./blocks/presentation.scss";
 
 // Form page

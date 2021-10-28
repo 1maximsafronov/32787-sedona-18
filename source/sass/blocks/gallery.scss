@@ -73,17 +73,17 @@
 }
 
 .gallery__item {
+  margin-bottom: 22px;
   padding-right: 20px;
   padding-left: 20px;
 
+  border-bottom: 1px solid #e5e5e5;
+
   @media (min-width: $tablet-width) {
+    margin: 0;
     padding: 0;
-  }
 
-  @media (min-width: $desktop-width) {
-    display: grid;
-
-    grid-template-rows: auto auto;
+    border: none;
   }
 }
 
@@ -91,87 +91,5 @@
   @media (min-width: $tablet-width) {
     grid-column-end: -1;
     grid-column-start: 1;
-  }
-}
-
-.gallery__item-picture {
-  overflow: hidden;
-
-  width: 100%;
-  height: 280px;
-  margin: 0;
-
-  @include flexImage;
-
-  @media (min-width: $desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 1;
-    grid-row-end: -1;
-  }
-}
-
-.gallery__item-info {
-  @media (min-width: $tablet-width) {
-    background-color: $bg-lighter-gray;
-  }
-
-  @media (min-width: $desktop-width) {
-    z-index: 1;
-
-    display: grid;
-    align-items: center;
-    justify-content: space-between;
-
-    color: $basic-white;
-    background-color: $basic-black-opacity-30;
-
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-  }
-}
-
-.gallery__item-title {
-  margin: 0;
-
-  color: $basic-black;
-
-  font-size: inherit;
-
-  @media (min-width: $desktop-width) {
-    color: inherit;
-
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-}
-
-.gallery__item-author {
-  margin: 0;
-
-  @media (min-width: $desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 2;
-  }
-}
-
-.gallery__item-likes {
-  margin: 0;
-
-  color: $basic-black;
-
-  font-weight: 700;
-
-  @media (min-width: $desktop-width) {
-    color: inherit;
-
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
   }
 }
