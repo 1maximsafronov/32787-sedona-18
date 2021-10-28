@@ -1,5 +1,8 @@
 input[type="radio"] + .custom-radiobtn {
-  padding-left: 78px;
+  display: flex;
+  align-items: center;
+
+  min-height: 56px;
 
   cursor: pointer;
 
@@ -8,6 +11,7 @@ input[type="radio"] + .custom-radiobtn {
 
     width: 56px;
     height: 56px;
+    margin-right: 22px;
 
     content: "";
 
