@@ -1,11 +1,14 @@
 .gallery {
+  margin-bottom: 32px;
   padding-top: 32px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
     padding-top: 65px;
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 63px;
     padding-top: 102px;
   }
 }
@@ -69,6 +72,10 @@
     padding-left: 60px;
 
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
