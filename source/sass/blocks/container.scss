@@ -1,5 +1,6 @@
 .container {
   display: grid;
+  // overflow-x: hidden;
   // width: 100%;
   // min-width: 320px;
   // max-width: 1200px;
@@ -11,12 +12,16 @@
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 
   grid-template-rows: min-content auto min-content;
+}
 
-  @media (min-width: $tablet-width) {
+@include media-tablet {
+  .container {
     width: $tablet-width;
   }
+}
 
-  @media (min-width: $desktop-width) {
+@include media-desktop {
+  .container {
     width: $desktop-width;
   }
 }
