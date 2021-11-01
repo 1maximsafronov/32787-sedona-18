@@ -1,27 +1,5 @@
 .main-nav {
   position: relative;
-
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: $mobile-width-only) {
-    &--closed {
-      .main-nav__list {
-        display: none;
-      }
-
-      .main-nav__toggle {
-        background-image: url("../img/icon-menu.svg");
-      }
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    display: block;
-
-    padding-top: 16px;
-    padding-bottom: 14px;
-  }
 }
 
 .main-nav__toggle {
@@ -30,7 +8,7 @@
   top: 17px;
   right: 20px;
 
-  display: block;
+  display: none;
 
   width: 23px;
   height: 22px;
@@ -52,34 +30,49 @@
   &:active {
     opacity: 0.3;
   }
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.main-nav__top-wrapper {
-  position: relative;
-
-  order: 1;
-
-  min-height: 56px;
-
-  background-color: $basic-white;
-
-  @media (min-width: $tablet-width) {
-    position: static;
-
-    min-height: min-content;
-
-    background: none;
-  }
 }
 
 .main-nav__list {
   margin: 0;
+}
 
-  @media (min-width: $tablet-width) {
+// ----- Стили только для мобильных ------
+@include media-mobile-only {
+  .main-nav__toggle {
+    display: block;
+  }
+
+  .main-nav--closed {
+    .site-nav__item {
+      display: none;
+    }
+
+    .main-nav__toggle {
+      background-image: url("../img/icon-menu.svg");
+    }
+  }
+
+  .main-nav--no-js {
+    .site-nav__item {
+      display: block;
+    }
+
+    .main-nav__toggle {
+      display: none;
+    }
+  }
+}
+
+// ----- Планшетные стили ------
+@include media-tablet {
+  .main-nav {
+    display: block;
+
+    padding-top: 16px;
+    padding-bottom: 14px;
+  }
+
+  .main-nav__list {
     li {
       width: 20%;
     }

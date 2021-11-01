@@ -1,8 +1,19 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+
   background-color: $basic-white;
 }
 
 .page-header__logo {
+  position: relative;
+
+  display: block;
+
+  min-height: 56px;
+}
+
+.page-header__logo-image {
   position: absolute;
   top: 0;
   left: 50%;
@@ -13,15 +24,12 @@
   height: 84px;
 
   transform: translateX(-50%);
-}
-
-.page-header__logo-image {
-  display: block;
-
-  width: 102px;
-  height: 84px;
 
   object-fit: contain;
+}
+
+.page-header__nav {
+  order: -1;
 }
 
 .page-header__intro {
@@ -59,6 +67,26 @@
 @include media-tablet {
   .page-header {
     position: relative;
+
+    display: block;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+
+    width: 102px;
+    height: 84px;
+
+    transform: translateX(-50%);
+  }
+
+  .page-header__logo-image {
+    position: static;
+
+    transform: none;
   }
 
   .page-header__intro {

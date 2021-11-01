@@ -11,22 +11,23 @@
 <body class="page__body">
   <div class="page__container">
     <header class="page-header">
-      <nav class="main-nav main-nav--closed">
-        <div class="main-nav__top-wrapper">
-          <a class="page-header__logo" href="index.html">
-            <picture>
-              <source srcset="./img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
-              <source srcset="./img/logo-sedona-tablet.svg" media="(min-width: 768px)">
-              <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" alt="Логотип Седона">
-            </picture>
-          </a>
-        </div>
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source srcset="./img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="./img/logo-sedona-tablet.svg" media="(min-width: 768px)">
+          <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" alt="Логотип Седона">
+        </picture>
+      </a>
+      <nav class="page-header__nav main-nav main-nav--no-js">
+        <button class="main-nav__toggle">
+          <span class="visually-hidden">Открыть/Закрыть меню</span>
+        </button>
         <ul class="main-nav__list site-nav">
           <li class="site-nav__item">
             <a href="index.html" class="site-nav__link">Главная</a>
           </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active">Фото и видео</a>
+          <li class="site-nav__item site-nav__item--current">
+            <a class="site-nav__link">Фото и видео</a>
           </li>
           <li class="site-nav__item">
             <a href="form.html" class="site-nav__link">Форма Отзыва</a>
@@ -35,9 +36,6 @@
             <a href="blank.html" class="site-nav__link">HTML Academy</a>
           </li>
         </ul><!-- /site-nav -->
-        <button class="main-nav__toggle">
-          <span class="visually-hidden">Открыть/Закрыть меню</span>
-        </button>
       </nav><!-- /main-nav -->
       <div class="page-header__intro">
         <img class="page-header__intro-img" width="229" height="39" src="./img/text-sedona.svg"
@@ -204,6 +202,8 @@
   <script src="js/script.min.js"></script>
   <script>
     const mainNav = document.querySelector(`.main-nav`);
+    mainNav.classList.remove(`main-nav--no-js`);
+    mainNav.classList.add(`main-nav--closed`);
     const mainNavToggle = mainNav.querySelector(`.main-nav__toggle`);
 
     mainNavToggle.addEventListener(`click`, (evt) => {
