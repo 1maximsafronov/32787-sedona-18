@@ -7,7 +7,21 @@
   top: 0;
   left: 50%;
 
+  display: block;
+
+  width: 102px;
+  height: 84px;
+
   transform: translateX(-50%);
+}
+
+.page-header__logo-image {
+  display: block;
+
+  width: 102px;
+  height: 84px;
+
+  object-fit: contain;
 }
 
 .page-header__intro {
@@ -73,6 +87,16 @@
 
 // Десктопные стили
 @include media-desktop {
+  .page-header__logo {
+    width: 187px;
+    height: 96px;
+  }
+
+  .page-header__logo-image {
+    width: 187px;
+    height: 96px;
+  }
+
   .page-header__intro {
     min-height: 301px;
     padding-top: 101px;
