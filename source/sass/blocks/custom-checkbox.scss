@@ -9,10 +9,11 @@ input[type="checkbox"] + .custom-checkbox {
   cursor: pointer;
 
   &::before {
+    display: block;
     // position: absolute;
     // top: calc(50% - 28px);
     // left: 0;
-    display: block;
+    flex-shrink: 0;
 
     width: 56px;
     height: 56px;

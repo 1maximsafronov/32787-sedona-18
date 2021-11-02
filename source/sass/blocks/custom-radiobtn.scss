@@ -8,6 +8,7 @@ input[type="radio"] + .custom-radiobtn {
 
   &::before {
     display: block;
+    flex-shrink: 0;
 
     width: 56px;
     height: 56px;
