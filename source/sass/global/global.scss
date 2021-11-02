@@ -1,4 +1,6 @@
 .page {
+  overflow-x: hidden;
+
   box-sizing: border-box;
   min-width: 320px;
   height: 100%;
@@ -12,7 +14,9 @@
 
 .page__body {
   display: grid;
+  overflow-x: hidden;
 
+  min-width: 320px;
   min-height: 100%;
 
   text-transform: uppercase;
@@ -32,4 +36,32 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.page__container {
+  display: grid;
+  // overflow-x: hidden;
+  // width: 100%;
+  // min-width: 320px;
+  // max-width: 1200px;
+
+  width: $mobile-width;
+  margin: 0 auto;
+
+  background-color: $basic-white;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+
+  grid-template-rows: min-content auto min-content;
+}
+
+@include media-tablet {
+  .page__container {
+    width: $tablet-width;
+  }
+}
+
+@include media-desktop {
+  .page__container {
+    width: $desktop-width;
+  }
 }

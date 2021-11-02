@@ -6,13 +6,11 @@
 @import "./global/global.scss";
 
 // outline utils
-@import "./outline.scss";
+// @import "./outline.scss";
 
 // blocks
 @import "./blocks/visually-hidden.scss";
-@import "./blocks/container.scss";
 @import "./blocks/button.scss";
-@import "./blocks/logotype.scss";
 @import "./blocks/main-nav.scss";
 @import "./blocks/site-nav.scss";
 @import "./blocks/hashtag.scss";
@@ -27,7 +25,13 @@
 
 // Photo page
 @import "./blocks/gallery.scss";
+@import "./blocks/photo-card.scss";
 @import "./blocks/presentation.scss";
+@import "./blocks/video-player.scss";
 
 // Form page
 @import "./blocks/feedback.scss";
+@import "./blocks/custom-radiobtn.scss";
+@import "./blocks/custom-checkbox.scss";
+@import "./blocks/custom-textbox.scss";
+@import "./blocks/message-popup.scss";

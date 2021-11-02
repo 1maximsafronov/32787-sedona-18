@@ -3,6 +3,7 @@
 
   img {
     position: absolute;
+    z-index: 0;
 
     display: block;
 
@@ -12,5 +13,31 @@
 
     object-fit: cover;
     object-position: center;
+  }
+}
+
+// <<<---Media-mixins--->>>
+@mixin media-mobile-only {
+  @media (max-width: $mobile-width-only) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+// @include media-tablet {}
+
+@mixin media-desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin media-castom($width) {
+  @media (min-width: $width) {
+    @content;
   }
 }

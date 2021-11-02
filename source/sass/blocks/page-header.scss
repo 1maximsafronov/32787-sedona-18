@@ -1,21 +1,40 @@
 .page-header {
-  @media (min-width: $tablet-width) {
-    position: relative;
-  }
+  display: flex;
+  flex-direction: column;
+
+  background-color: $basic-white;
 }
 
 .page-header__logo {
+  position: relative;
+
+  display: block;
+
+  min-height: 56px;
+}
+
+.page-header__logo-image {
   position: absolute;
   top: 0;
   left: 50%;
 
+  display: block;
+
+  width: 102px;
+  height: 84px;
+
   transform: translateX(-50%);
+
+  object-fit: contain;
+}
+
+.page-header__nav {
+  order: -1;
 }
 
 .page-header__intro {
   min-height: 158px;
   padding-top: 52px;
-  padding-bottom: 67px;
 
   text-align: center;
 
@@ -25,50 +44,106 @@
   background-position: 50% 100%;
   background-size: auto, cover;
 
-  @media (min-width: $tablet-width) {
-    min-height: 290px;
-    padding-top: 95px;
-    padding-bottom: 117px;
-
-    background-image: url("../img/bg-intro-triangle-tablet.svg"),
-      url("../img/bg-back-tablet@1x.jpg");
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: 301px;
-    padding-top: 101px;
-    padding-bottom: 120px;
-
-    background-image: url("../img/bg-intro-triangle-desktop.svg"),
-      url("../img/bg-back-desktop@1x.jpg");
-  }
-
   &--index {
+    min-height: 390px;
     padding-top: 90px;
-    padding-bottom: 85px;
-
-    @media (min-width: $tablet-width) {
-      padding-top: 78px;
-      padding-bottom: 91px;
-    }
   }
 }
 
 .page-header__intro--index .page-header__intro-img {
   width: 282px;
-  height: auto;
-
-  @media (min-width: $tablet-width) {
-    width: 460px;
-  }
+  height: 214px;
 }
 
 .page-header__intro-img {
+  display: inline-block;
+
   width: 229px;
   height: 39px;
+  margin: 0;
+}
 
-  @media (min-width: $tablet-width) {
+// Планшетные стили
+@include media-tablet {
+  .page-header {
+    position: relative;
+
+    display: block;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+
+    width: 102px;
+    height: 84px;
+
+    transform: translateX(-50%);
+  }
+
+  .page-header__logo-image {
+    position: static;
+
+    transform: none;
+  }
+
+  .page-header__intro {
+    min-height: 290px;
+    padding-top: 95px;
+
+    background-image: url("../img/bg-intro-triangle-tablet.svg"),
+      url("../img/bg-back-tablet@1x.jpg");
+
+    &--index {
+      min-height: 518px;
+      padding-top: 77px;
+    }
+  }
+
+  .page-header__intro--index .page-header__intro-img {
     width: 460px;
-    height: auto;
+    height: 350px;
+  }
+
+  .page-header__intro-img {
+    width: 457px;
+    height: 78px;
+  }
+}
+
+// Десктопные стили
+@include media-desktop {
+  .page-header__logo {
+    width: 187px;
+    height: 96px;
+  }
+
+  .page-header__logo-image {
+    width: 187px;
+    height: 96px;
+  }
+
+  .page-header__intro {
+    min-height: 301px;
+    padding-top: 101px;
+
+    background-image: url("../img/bg-intro-triangle-desktop.svg"),
+      url("../img/bg-back-desktop@1x.jpg");
+
+    &--index {
+      min-height: 518px;
+      padding-top: 78px;
+    }
+  }
+
+  .page-header__intro--index .page-header__intro-img {
+    height: 350px;
+  }
+
+  .page-header__intro-img {
+    width: 460px;
+    height: 80px;
   }
 }

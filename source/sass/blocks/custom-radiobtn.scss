@@ -1,0 +1,61 @@
+input[type="radio"] + .custom-radiobtn {
+  display: flex;
+  align-items: center;
+
+  min-height: 56px;
+
+  cursor: pointer;
+
+  &::before {
+    display: block;
+    flex-shrink: 0;
+
+    width: 56px;
+    height: 56px;
+    margin-right: 22px;
+
+    content: "";
+
+    border: 17px solid #f2f2f2;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+  }
+}
+
+input[type="radio"] + .custom-radiobtn:hover,
+input[type="radio"] + .custom-radiobtn:focus,
+input[type="radio"]:focus + .custom-radiobtn {
+  &::before {
+    border-color: #e5e5e5;
+    background-color: #e5e5e5;
+  }
+}
+
+input[type="radio"]:active + .custom-radiobtn,
+input[type="radio"] + .custom-radiobtn:active {
+  &::before {
+    border-color: #d5d5d5;
+    background-color: #d5d5d5;
+  }
+}
+
+input[type="radio"]:checked + .custom-radiobtn {
+  &::before {
+    background-color: #333333;
+  }
+}
+
+input[type="radio"]:checked + .custom-radiobtn:hover,
+input[type="radio"]:checked + .custom-radiobtn:focus,
+input[type="radio"]:checked:focus + .custom-radiobtn {
+  &::before {
+    background-color: #333333;
+  }
+}
+
+input[type="radio"]:checked:active + .custom-radiobtn,
+input[type="radio"]:checked + .custom-radiobtn:active {
+  &::before {
+    background-color: #a4a4a4;
+  }
+}

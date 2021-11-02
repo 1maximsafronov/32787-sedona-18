@@ -1,22 +1,49 @@
 .presentation {
   //
+  @media (min-width: $tablet-width) {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 200px;
+    padding-left: 200px;
+  }
 }
 
 .presentation__title {
+  margin-right: 20px;
+  margin-bottom: 33px;
+  margin-left: 20px;
+
+  text-align: center;
+
   color: $basic-black;
 
   font-size: 21px;
   line-height: 26px;
 
   @media (min-width: $tablet-width) {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+
     font-size: 30px;
   }
 }
 
 .presentation__desc {
-  //
-}
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 33px;
+  margin-left: 20px;
 
-.presentation__video {
-  //
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 450px;
+    margin-right: auto;
+    margin-bottom: 68px;
+    margin-left: auto;
+  }
 }
