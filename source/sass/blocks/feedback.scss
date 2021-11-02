@@ -384,9 +384,6 @@
 
     .feedback__subtitle {
       margin-bottom: 71px;
-
-      grid-column-start: 1;
-      grid-column-end: -1;
     }
 
     .feedback__textbox {
@@ -415,9 +412,6 @@
     }
   }
 
-  .feedback__impression {
-  }
-
   .feedback__landmark {
     margin-bottom: 73px;
 
@@ -439,18 +433,5 @@
         margin-right: 0;
       }
     }
-  }
-
-  .feedback__message {
-  }
-
-  .feedback__legend {
-  }
-
-  .feedback input,
-  .feedback textarea {
-  }
-
-  .feedback__list {
   }
 }
