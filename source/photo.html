@@ -55,7 +55,22 @@
         <div class="gallery__list">
           <article class="gallery__item gallery__item--big photo-card photo-card--big">
             <p class="photo-card__picture">
-              <img src="./img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                  srcset="./img/photo-sunset-desktop@1x.webp 1x, ./img/photo-sunset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/photo-sunset-tablet@1x.webp 1x, ./img/photo-sunset-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/photo-sunset-mobile@1x.webp 1x, ./img/photo-sunset-mobile@2x.webp 2x">
+
+                <source srcset="./img/photo-sunset-desktop@1x.jpg 1x, ./img/photo-sunset-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)">
+                <source srcset="./img/photo-sunset-tablet@1x.jpg 1x, ./img/photo-sunset-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)">
+
+                <img src="./img/photo-sunset-mobile@1x.jpg" srcset="./img/photo-sunset-mobile@2x.jpg 2x"
+                  alt="Неродные просторы">
+              </picture>
             </p>
             <div class="photo-card__info">
               <h3 class="photo-card__title">Неродные просторы</h3>
@@ -70,7 +85,22 @@
           </article>
           <article class="gallery__item photo-card">
             <p class="photo-card__picture">
-              <img src="./img/photo-cactus-mobile@1x.jpg" alt="Местрная растительность">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                  srcset="./img/photo-cactus-desktop@1x.webp 1x, ./img/photo-cactus-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/photo-cactus-tablet@1x.webp 1x, ./img/photo-cactus-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/photo-cactus-mobile@1x.webp 1x, ./img/photo-cactus-mobile@2x.webp 2x">
+
+                <source srcset="./img/photo-cactus-desktop@1x.jpg 1x, ./img/photo-cactus-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)">
+                <source srcset="./img/photo-cactus-tablet@1x.jpg 1x, ./img/photo-cactus-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)">
+
+                <img src="./img/photo-cactus-mobile@1x.jpg" srcset="./img/photo-cactus-mobile@2x.jpg 2x"
+                  alt="Местрная растительность">
+              </picture>
             </p>
             <div class="photo-card__info">
               <h3 class="photo-card__title">Местная растительность</h3>
@@ -85,7 +115,22 @@
           </article>
           <article class="gallery__item photo-card">
             <p class="photo-card__picture">
-              <img src="./img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                  srcset="./img/photo-roads-desktop@1x.webp 1x, ./img/photo-roads-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/photo-roads-tablet@1x.webp 1x, ./img/photo-roads-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/photo-roads-mobile@1x.webp 1x, ./img/photo-roads-mobile@2x.webp 2x">
+
+                <source srcset="./img/photo-roads-desktop@1x.jpg 1x, ./img/photo-roads-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)">
+                <source srcset="./img/photo-roads-tablet@1x.jpg 1x, ./img/photo-roads-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)">
+
+                <img src="./img/photo-roads-mobile@1x.jpg" srcset="./img/photo-roads-mobile@2x.jpg 2x"
+                  alt="Дорога на север">
+              </picture>
             </p>
             <div class="photo-card__info">
 
@@ -101,7 +146,22 @@
           </article>
           <article class="gallery__item photo-card">
             <p class="photo-card__picture">
-              <img src="./img/photo-bridge-mobile@1x.jpg" alt="Мост дьявола">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                  srcset="./img/photo-bridge-desktop@1x.webp 1x, ./img/photo-bridge-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/photo-bridge-tablet@1x.webp 1x, ./img/photo-bridge-tablet@2x.webp 2x">
+                <source type="image/webp"
+                  srcset="./img/photo-bridge-mobile@1x.webp 1x, ./img/photo-bridge-mobile@2x.webp 2x">
+
+                <source srcset="./img/photo-bridge-desktop@1x.jpg 1x, ./img/photo-bridge-desktop@2x.jpg 2x"
+                  media="(min-width: 1200px)">
+                <source srcset="./img/photo-bridge-tablet@1x.jpg 1x, ./img/photo-bridge-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)">
+
+                <img src="./img/photo-bridge-mobile@1x.jpg" srcset="./img/photo-bridge-mobile@2x.jpg 2x"
+                  alt="Мост дьявола">
+              </picture>
             </p>
             <div class="photo-card__info">
               <h3 class="photo-card__title">Мост дьявола</h3>
@@ -123,7 +183,18 @@
         </p>
         <div class="presentation__video video-player">
           <div class="video-player__video">
-            <img src="img/video-desktop@1x.jpg" alt="">
+            <picture>
+              <source type="image/webp" media="(min-width: 1300px)"
+                srcset="./img/video-desktop@1x.webp 1x, ./img/video-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="./img/video-tablet@1x.webp 1x, ./img/video-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="./img/video-mobile@1x.webp 1x, ./img/video-mobile@2x.webp 2x">
+
+              <source srcset="./img/video-desktop@1x.jpg 1x, ./img/video-desktop@2x.jpg 2x" media="(min-width: 1200px)">
+              <source srcset="./img/video-tablet@1x.jpg 1x, ./img/video-tablet@2x.jpg 2x" media="(min-width: 768px)">
+
+              <img src="./img/video-mobile@1x.jpg" srcset="./img/video-mobile@2x.jpg 2x" alt="">
+            </picture>
           </div>
           <div class="video-player__controls">
             <div class="video-player__timeline">
