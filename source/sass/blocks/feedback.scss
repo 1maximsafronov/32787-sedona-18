@@ -1,11 +1,11 @@
 .feedback {
-  padding-top: 36px;
-  padding-bottom: 48px;
+  padding-top: 37px;
+  padding-bottom: 39px;
 }
 
 .feedback__title {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 
   text-align: center;
 
@@ -16,7 +16,16 @@
 }
 
 .feedback__desc {
+  margin: 0;
+  margin-bottom: 16px;
+
   text-align: center;
+
+  line-height: 24px;
+
+  br {
+    display: none;
+  }
 }
 
 .feedback__form {
@@ -122,7 +131,7 @@
 }
 
 .feedback__message {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
 
   .feedback__subtitle {
     margin-bottom: 15px;
@@ -170,21 +179,29 @@
 // ------------------------
 @include media-tablet {
   .feedback {
-    padding-top: 64px;
+    padding-top: 62px;
     padding-right: 60px;
     padding-bottom: 61px;
     padding-left: 60px;
   }
 
   .feedback__title {
+    margin-bottom: 33px;
+
     font-size: 30px;
   }
 
   .feedback__desc {
-    margin-bottom: 85px;
+    margin-bottom: 87px;
+
+    br {
+      display: block;
+    }
   }
 
   .feedback__subtitle {
+    margin-bottom: 23px;
+
     text-align: left;
 
     font-size: 21px;
@@ -237,6 +254,10 @@
         margin-left: 47px;
       }
     }
+  }
+
+  .feedback__impression .feedback__list-item {
+    margin-bottom: 23px;
   }
 
   .feedback__user-info {
@@ -294,7 +315,7 @@
   }
 
   .feedback__message {
-    margin-bottom: 58px;
+    margin-bottom: 53px;
 
     .feedback__subtitle {
       margin-bottom: 55px;
@@ -328,7 +349,7 @@
   }
 
   .feedback__desc {
-    margin-bottom: 63px;
+    margin-bottom: 58px;
   }
 
   .feedback__landmark,
@@ -393,8 +414,14 @@
     }
   }
 
+  .feedback__impression {
+    .feedback__subtitle {
+      padding-left: 80px;
+    }
+  }
+
   .feedback__landmark {
-    margin-bottom: 73px;
+    margin-bottom: 70px;
 
     .feedback__subtitle {
       margin-bottom: 42px;
@@ -408,11 +435,15 @@
 
     .feedback__list-item {
       margin: 0;
-      margin-right: 43px;
+      margin-right: 10px;
 
       &:nth-child(4n) {
         margin-right: 0;
       }
     }
+  }
+
+  .feedback__message {
+    margin-bottom: 49px;
   }
 }
