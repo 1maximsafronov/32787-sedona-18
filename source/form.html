@@ -59,12 +59,12 @@
             <p class="feedback__textbox">
               <label class="feedback__textbox-label" for="feedback-form-first-name">Имя*:</label>
               <input class="custom-textbox" type="text" name="feedback-form-first-name" id="feedback-form-first-name"
-                placeholder="Петр">
+                placeholder="Петр" required>
             </p>
             <p class="feedback__textbox">
               <label class="feedback__textbox-label" for="feedback-form-last-name">Фамилия*:</label>
               <input class="custom-textbox" type="text" name="feedback-form-last-name" id="feedback-form-last-name"
-                placeholder="Иванов">
+                placeholder="Иванов" required>
             </p>
             <p class="feedback__textbox">
               <label class="feedback__textbox-label" for="feedback-form-middle-name">Отчество*:</label>
@@ -82,12 +82,12 @@
                     Контактный
                   </span> телефон*:</label>
                 <input class="custom-textbox" type="tel" name="feedback-form-phone" id="feedback-form-phone"
-                  placeholder="Введите телефон">
+                  placeholder="Введите телефон" required>
               </p>
               <p class="feedback__textbox">
                 <label class="feedback__textbox-label" for="feedback-form-email">Электронная почта*:</label>
                 <input class="custom-textbox" type="email" name="feedback-form-email" id="feedback-form-email"
-                  placeholder="Введите e-mail">
+                  placeholder="Введите e-mail" required>
               </p>
             </div>
           </fieldset>
@@ -223,15 +223,15 @@
 
   <script src="js/script.min.js"></script>
   <script>
-    // const mainNav = document.querySelector(`.main-nav`);
-    // mainNav.classList.remove(`main-nav--no-js`);
-    // mainNav.classList.add(`main-nav--closed`);
-    // const mainNavToggle = mainNav.querySelector(`.main-nav__toggle`);
+    const mainNav = document.querySelector(`.main-nav`);
+    mainNav.classList.remove(`main-nav--no-js`);
+    mainNav.classList.add(`main-nav--closed`);
+    const mainNavToggle = mainNav.querySelector(`.main-nav__toggle`);
 
-    // mainNavToggle.addEventListener(`click`, (evt) => {
-    //   evt.preventDefault();
-    //   mainNav.classList.toggle(`main-nav--closed`);
-    // });
+    mainNavToggle.addEventListener(`click`, (evt) => {
+      evt.preventDefault();
+      mainNav.classList.toggle(`main-nav--closed`);
+    });
   </script>
 </body>
 
