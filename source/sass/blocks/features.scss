@@ -4,9 +4,9 @@
 
 .features__title {
   margin: 0;
-  margin-right: 20px;
-  margin-bottom: 33px;
-  margin-left: 20px;
+  margin-right: 25px;
+  margin-bottom: 30px;
+  margin-left: 25px;
 
   text-align: center;
 
@@ -19,7 +19,7 @@
 .features__desc {
   margin: 0;
   margin-right: 20px;
-  margin-bottom: 27px;
+  margin-bottom: 12px;
   margin-left: 20px;
 
   text-align: center;
@@ -86,12 +86,12 @@
 }
 
 .features__item--with-picture .features__item-wrapper {
-  padding-top: 39px;
-  padding-bottom: 35px;
+  padding-top: 36px;
+  padding-bottom: 38px;
 }
 
 .features__item-wrapper {
-  padding-top: 25px;
+  padding-top: 28px;
   padding-right: 25px;
   padding-bottom: 24px;
   padding-left: 25px;
@@ -99,7 +99,7 @@
 
 .features__item-title {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 
   color: $basic-black;
 
@@ -133,9 +133,9 @@
 .features__details-list {
   margin: 0;
   padding: 0;
-  padding-top: 25px;
+  padding-top: 35px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 36px;
   padding-left: 20px;
 
   list-style: none;
@@ -147,9 +147,12 @@
   position: relative;
   //
 
-  margin-bottom: 15px;
-  padding-top: 10px;
+  margin-bottom: 27px;
   padding-left: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .features__details-title {
@@ -227,7 +230,7 @@
   .features__desc {
     width: 520px;
     margin-right: auto;
-    margin-bottom: 52px;
+    margin-bottom: 55px;
     margin-left: auto;
   }
 
@@ -263,15 +266,21 @@
     }
   }
 
+  .features__item--with-picture .features__item-wrapper {
+    padding-top: 41px;
+  }
+
   .features__item-wrapper {
     min-height: 256px;
-    padding-top: 40px;
+    padding-top: 43px;
     padding-right: 40px;
     padding-bottom: 40px;
     padding-left: 40px;
   }
 
   .features__item-title {
+    margin-bottom: 10px;
+
     font-size: 21px;
 
     br {
@@ -349,11 +358,15 @@
 
 @include media-desktop {
   .features {
-    padding-top: 43px;
+    padding-top: 56px;
   }
 
   .features__desc {
-    margin-bottom: 41px;
+    margin-bottom: 42px;
+  }
+
+  .features__item--with-picture .features__item-wrapper {
+    padding-top: 50px;
   }
 
   .features__item-wrapper {
